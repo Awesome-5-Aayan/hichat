@@ -34,7 +34,7 @@ function(snapshot)
 getData();
 function redirectToRoom_name(name){
       console.log (name);
-      localStorage.setItem("room_name", room_name);
+      localStorage.setItem("room_name", name);
       window.location = "kwitter_page.html";
 }
 function logout() {
@@ -43,3 +43,4 @@ function logout() {
 
       window.location = "index.html";
 }
+
