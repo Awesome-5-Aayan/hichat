@@ -1,19 +1,19 @@
-
-var firebaseConfig = {
-      apiKey: "AIzaSyANEe5UgRbvzTMOKeQ9m9Yf7mvcO7SRhYk",
-      authDomain: "hi-chat-1d0bf.firebaseapp.com",
-      databaseURL: "https://hi-chat-1d0bf-default-rtdb.firebaseio.com",
-      projectId: "hi-chat-1d0bf",
-      storageBucket: "hi-chat-1d0bf.appspot.com",
-      messagingSenderId: "56009083780",
-      appId: "1:56009083780:web:486d5271c7748ab4adebd1",
-      measurementId: "G-3S3G9KYNV9"
+const firebaseConfig = {
+      apiKey: "AIzaSyCSVZNqKDRH0UkPf8si3ilc3fVRhLo6OI4",
+      authDomain: "hi-chat-a6fcd.firebaseapp.com",
+      databaseURL: "https://hi-chat-a6fcd-default-rtdb.firebaseio.com",
+      projectId: "hi-chat-a6fcd",
+      storageBucket: "hi-chat-a6fcd.appspot.com",
+      messagingSenderId: "377911906302",
+      appId: "1:377911906302:web:ec8c896881cd2c7695baaf",
+      measurementId: "G-4M243SPTM6"
     };
 firebase.initializeApp(firebaseConfig);
 user_name = localStorage.getItem("user_name");
 document.getElementById("user_name").innerHTML = "Welcome " + user_name + "!";
 function addRoom(){
       room_name=document.getElementById("room_name").value;
+      console.log("add room called");
       firebase.database().ref("/").child(room_name).update({
             purpose:"adding room name"
       });
